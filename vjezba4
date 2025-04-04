@@ -1,14 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE osobe SYSTEM "osobe.dtd">
+
 <!-- DTD 
 
 <!ATTLIST Osoba
 spol (M|Z) "M">
 
 -->
-
-<!-- XML -->
-
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE osobe SYSTEM "osobe.dtd">
 
 <Osoba spol="Z">
     <Ime></Ime>
