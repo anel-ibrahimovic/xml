@@ -1,7 +1,9 @@
-<!-- DTD -->
+<!-- DTD 
 
 <!ATTLIST Osoba
 spol (M|Z) "M">
+
+-->
 
 <!-- XML -->
 
