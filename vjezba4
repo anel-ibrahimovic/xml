@@ -1,0 +1,24 @@
+<!-- DTD -->
+
+<!ATTLIST Osoba
+spol (M|Z) "M">
+
+<!-- XML -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE osobe SYSTEM "osobe.dtd">
+
+<Osoba spol="Z">
+    <Ime></Ime>
+    <Prezime></Prezime>
+    <MjestoStanovanja>
+        <Adresa></Adresa>
+        <Grad></Grad>
+        <Drzava> </Drzava>
+    </MjestoStanovanja>
+    <Kontakt>
+        <Mobitel></Mobitel>
+        <KucniTelefon></KucniTelefon>
+        <Email></Email>
+    </Kontakt>
+</Osoba>
