@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<osoba xsi:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <ime></ime>
+    <cijena></cijena>
+    <godine></godine>
+    <aktivan></aktivan>
+    <datumRodjenja></datumRodjenja>
+    <vrijemePocetka></vrijemePocetka>
+</osoba>
