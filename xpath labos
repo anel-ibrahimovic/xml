@@ -1,0 +1,53 @@
+1. Ispiši imena svih studenata.
+/Studenti/Student/Prezime
+
+2. Ispiši naslove svih predmeta koje slušaju studenti.
+/Studenti/Student/Predmet/Naslov ili //Naslov
+
+3. Dohvati četvrtu vježbu trećeg studenta.
+/Studenti/Student[@RedniBroj=2]/Predmet/Vjezbe/Vjezba[@Sifra="Xml4_4"]
+
+4. Ispiši sve vježbe drugog studenta koje nije pohađao (vrijednost = "NE").
+/Studenti/Student[@RedniBroj=2]/Predmet/Vjezbe/Vjezba[text()="NE"]
+
+5. Zbroji sve bodove sa kolokvija svih studenata.
+sum(Studenti/Student/Predmet/Kolokviji/Kolokvij)
+
+6. Ispiši prezime posljednjeg studenta u dokumentu.
+Studenti/Student[last()]/Prezime
+
+7. Provjeri sadrži li ime trećeg studenta slovo "a".
+Studenti/Student[3]/contains(Ime, "a")
+
+8. Spoji ime drugog i prezime četvrtog studenta u jedan tekst.
+concat(Studenti/Student[2]/Ime, Studenti/Student[4]/Prezime)
+
+9. Izračunaj broj godina studenta s RedniBroj = 3 (pretpostavi da je trenutna godina 2025).
+number(2025) - number(/Studenti/Student[@RedniBroj=3]/GodinaRodjenja)
+
+10. Provjeri postoji li student koji ima 5 bodova na nekom kolokviju.
+boolean(//Kolokviji/Kolokvij=5) ili //Kolokviji/Kolokvij=5
+
+11. Ispiši ukupnu duljinu prezime četvrtog i imena drugog studenta zajedno.
+string-length(concat(/Studenti/Student[@RedniBroj=4]/Prezime, /Studenti/Student[@RedniBroj=2]/Ime))
+
+12. Prebroj vježbe koje student s RedniBroj = 2 nije pohađao.
+count(/Studenti/Student[@RedniBroj=2]/Predmet/Vjezbe/Vjezba[text()="NE"])
+
+13. Provjeri postoji li student koji ima 0 bodova na drugom kolokviju.
+/Studenti/Student/Predmet/Kolokviji/Kolokvij[@Sifra="Xml4_2"]=0 ili /Studenti/Student/Predmet/Kolokviji/Kolokvij[position()=2]=0
+
+14. Ispiši imena svih studenata koji su u grupi A.
+/Studenti/Student[Grupa="A"]/Ime
+
+15. Ispiši studente koji su položili sve vježbe (vrijednost svake vježbe = "DA").
+/Studenti/Student[Predmet/Vjezbe[not(Vjezba[text()!="DA"])]]/Ime
+
+16. Pronađi studente koji imaju barem jednu vježbu s vrijednošću "NE".
+/Studenti/Student[Predmet/Vjezbe[(Vjezba[text()="NE"])]]/Ime
+
+17. Ispiši sve kolokvije čiji je broj bodova manji od 3.
+/Studenti/Student/Predmet/Kolokviji/Kolokvij[text()<3]
+
+18. Ispiši imena studenata čije prezime sadrži slovo "ć".
+/Studenti/Student[contains(Prezime, "ć")]/Ime
