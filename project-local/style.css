@@ -1,0 +1,49 @@
+body { 
+	font-family: Verdana, Arial, sans-serif;
+	padding: 20px; 
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.book-status {
+	color: green;
+}
+
+#bookList { 
+	width: 50%;
+	margin-top: 20px; 
+}
+
+.book-img {
+	width: 100px;
+	margin-right: 5%;
+}
+
+.book-info p {
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+.book button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book button:hover {
+  background-color: #0056b3;
+}
