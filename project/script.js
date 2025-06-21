@@ -1,7 +1,6 @@
 const books = []; // Držimo knjige samo u memoriji (array)
 
 function fetchBooksFromGitHubAPI() {
-  // GitHub API
   const apiUrl = 'https://api.github.com/repos/anel-ibrahimovic/xml/contents/eBooks';
 
   fetch(apiUrl)
@@ -12,8 +11,7 @@ function fetchBooksFromGitHubAPI() {
       return response.json(); 
     })
     .then(data => {
-      // GitHub API vraća informacije o datoteci, uključujući base64 kodirani sadržaj
-      const fileContent = atob(data.content); // Dekodiranje base64 sadržaja
+      const fileContent = atob(data.content);
 
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(fileContent, "application/xml");
@@ -90,15 +88,14 @@ function loadBooks() {
   });
 }
 
-// Funkcija za ažuriranje statusa knjige
 function updateStatus(id, newStatus) {
   const book = books.find(b => b.id === id);
   if (book) {
     book.status = newStatus;
-    loadBooks(); // Ponovno učitavanje knjiga nakon ažuriranja statusa
+    loadBooks(); 
   }
 }
 
 window.onload = function () {
-  fetchBooksFromGitHubAPI();  // Dohvaćanje podataka putem GitHub API-ja
+  fetchBooksFromGitHubAPI(); 
 };
