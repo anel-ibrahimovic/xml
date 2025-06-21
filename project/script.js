@@ -1,4 +1,4 @@
-const books = []; // Držimo knjige samo u memoriji (array)
+const books = [];
 
 function fetchBooksFromGitHubAPI() {
   const apiUrl = 'https://api.github.com/repos/anel-ibrahimovic/xml/contents/eBooks';
@@ -49,7 +49,7 @@ function fetchBooksFromGitHubAPI() {
       if (books.length === 0) {
         alert("No Books");
       } else {
-        loadBooks(); // Pozivamo loadBooks nakon što smo dodali knjige u memoriju
+        loadBooks(); 
         alert(`${books.length} books loaded from GitHub API.`);
       }
     })
