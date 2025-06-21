@@ -95,7 +95,7 @@ function updateStatus(id, newStatus) {
   const book = books.find(b => b.id === id);
   if (book) {
     book.status = newStatus;
-    localStorage.setItem(`bookStatus_${id}`, newStatus); // Spremi status lokalno
+    localStorage.setItem(`bookStatus_${id}`, newStatus);
     loadBooks(); 
   }
 }
